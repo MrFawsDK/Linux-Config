@@ -28,7 +28,7 @@ Config/
 │   └── mrfaws-purple-hacker.png Wallpaper used by Hyprlock
 ├── Scripts/
 │   ├── wifi-gui.py              MrFaws Network Manager (GTK4 NetworkManager GUI)
-│   ├── install.sh               Installs the `mrfaws-network` command and launcher
+│   ├── install.sh               Installs the `network` command and launcher
 │   ├── mrfaws-wifi.desktop      Launcher for the Network Manager
 │   ├── network_manager/         Network Manager source package
 │   └── legacy/                  Archived V1 Wi-Fi Manager
@@ -90,7 +90,7 @@ cp waybar-config.jsonc         ~/.config/waybar/config.jsonc
 cp waybar-modules.jsonc        ~/.config/waybar/Modules
 cp waybar-modules-custom.jsonc ~/.config/waybar/ModulesCustom
 cp waybar-style.css            ~/.config/waybar/style.css
-Scripts/install.sh            # mrfaws-network command + launcher
+Scripts/install.sh            # network command + launcher
 ```
 
 Notes:
@@ -98,5 +98,5 @@ Notes:
 - `waybar-config.jsonc` includes `$HOME/.config/waybar/Modules` and `ModulesCustom`, so those files must keep their original names when installed.
 - `hyprlock.conf` loads the wallpaper from `/home/faws/.config/hypr/wallpapers/`. Change that path if your username is different.
 - Edit `gitconfig` with your own name and email before using it.
-- `Scripts/` is run in place: `Scripts/install.sh` points the `mrfaws-network` command and the launcher at the repo's current location. Re-run it if you move the repo.
+- `Scripts/` is run in place: `Scripts/install.sh` points the `network` command and the launcher at the repo's current location. Re-run it if you move the repo.
 - Reload Hyprland with `hyprctl reload`, and restart Waybar to apply changes.
