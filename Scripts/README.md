@@ -40,11 +40,11 @@ Run the installer once (and again if you move the repo):
 ~/Config/Scripts/install.sh
 ```
 
-It checks the packages, links the command `mrfaws-network` into
+It checks the packages, links the command `network` into
 `~/.local/bin` and installs the app launcher. Then start the app with:
 
 ```bash
-mrfaws-network
+network
 ```
 
 or from rofi / the app menu ("MrFaws Network Manager"). Without installing:
@@ -67,7 +67,7 @@ Wayland app_id, so Hyprland links the window to the launcher entry.
 ```text
 Scripts/
 ├── wifi-gui.py              Entry point (what the launcher runs)
-├── install.sh               Installs the `mrfaws-network` command and launcher
+├── install.sh               Installs the `network` command and launcher
 ├── mrfaws-wifi.desktop      Application launcher
 ├── network_manager/         V2 package
 │   ├── __init__.py          App ID, name and version

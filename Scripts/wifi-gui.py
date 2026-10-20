@@ -18,7 +18,7 @@ import os
 import sys
 
 # The package sits next to this script. The launcher runs this file by
-# absolute path and the `mrfaws-network` command reaches it through a
+# absolute path and the `network` command reaches it through a
 # symlink in ~/.local/bin, so the working directory can be anything.
 # realpath() follows that symlink back to Scripts/ before adding it to
 # the import path.

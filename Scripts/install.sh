@@ -5,7 +5,7 @@
 # Run once (and again after moving the repo):  ~/Config/Scripts/install.sh
 #
 #   * checks the required packages and offers the pacman command if missing
-#   * links the command `mrfaws-network` into ~/.local/bin (already in PATH)
+#   * links the command `network` into ~/.local/bin (already in PATH)
 #   * installs the app launcher (rofi / app menu) with the correct path
 #
 # Nothing is copied: the command and launcher point at this repo, so edits
@@ -18,7 +18,7 @@ SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
 ENTRY="$SCRIPT_DIR/wifi-gui.py"
 BIN_DIR="$HOME/.local/bin"
 APP_DIR="$HOME/.local/share/applications"
-COMMAND="mrfaws-network"
+COMMAND="network"
 DESKTOP="mrfaws-wifi.desktop"
 
 # --- Dependencies -------------------------------------------------------------
@@ -36,6 +36,11 @@ fi
 chmod +x "$ENTRY"
 mkdir -p "$BIN_DIR"
 ln -sfn "$ENTRY" "$BIN_DIR/$COMMAND"
+# Remove the link from before the command was renamed (only if it is ours).
+OLD_LINK="$BIN_DIR/mrfaws-network"
+if [[ -L "$OLD_LINK" && "$(readlink -f "$OLD_LINK")" == "$ENTRY" ]]; then
+    rm "$OLD_LINK"
+fi
 echo "Command:  $BIN_DIR/$COMMAND -> $ENTRY"
 
 # --- App launcher -------------------------------------------------------------
