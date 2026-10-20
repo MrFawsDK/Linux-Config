@@ -32,11 +32,23 @@ sudo pacman -S --needed networkmanager python python-gobject gtk4 libadwaita
 - A polkit agent must run in the Hyprland session, so NetworkManager can ask
   for authorisation when needed (e.g. `polkit-kde-agent` or `hyprpolkitagent`).
 
-## Running
+## Install and run
+
+Run the installer once (and again if you move the repo):
 
 ```bash
-python3 ~/Config/Scripts/wifi-gui.py
+~/Config/Scripts/install.sh
 ```
+
+It checks the packages, links the command `mrfaws-network` into
+`~/.local/bin` and installs the app launcher. Then start the app with:
+
+```bash
+mrfaws-network
+```
+
+or from rofi / the app menu ("MrFaws Network Manager"). Without installing:
+`python3 ~/Config/Scripts/wifi-gui.py`.
 
 Starting it again while it is open just raises the existing window
 (single instance via the D-Bus name `dk.mrfaws.NetworkManager`).
@@ -45,22 +57,17 @@ Keyboard shortcuts: `F5` / `Ctrl+R` refresh, `Ctrl+W` close window, `Ctrl+Q` qui
 
 ### Launcher
 
-`mrfaws-wifi.desktop` is the application launcher. Install it with:
-
-```bash
-cp ~/Config/Scripts/mrfaws-wifi.desktop ~/.local/share/applications/
-```
-
-`StartupWMClass=dk.mrfaws.NetworkManager` matches the app's Wayland app_id,
-so Hyprland links the window to the launcher entry. The `Exec` line uses the
-absolute path `/home/faws/Config/Scripts/wifi-gui.py`; change it if the repo
-lives somewhere else.
+`mrfaws-wifi.desktop` is the application launcher; `install.sh` copies it to
+`~/.local/share/applications/` and rewrites its `Exec` line to the repo's
+real location. `StartupWMClass=dk.mrfaws.NetworkManager` matches the app's
+Wayland app_id, so Hyprland links the window to the launcher entry.
 
 ## Layout
 
 ```text
 Scripts/
 ├── wifi-gui.py              Entry point (what the launcher runs)
+├── install.sh               Installs the `mrfaws-network` command and launcher
 ├── mrfaws-wifi.desktop      Application launcher
 ├── network_manager/         V2 package
 │   ├── __init__.py          App ID, name and version
