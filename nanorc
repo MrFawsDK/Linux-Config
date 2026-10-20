@@ -1,0 +1,19 @@
+# MrFaws Nano Configuration
+
+# Syntax highlighting for installed languages
+include "/usr/share/nano/*.nanorc"
+
+# Show line numbers
+set linenumbers
+
+# Automatic indentation
+set autoindent
+
+# Tab size
+set tabsize 4
+
+# Wrap long lines visually
+set softwrap
+
+# Show position in file
+set constantshow

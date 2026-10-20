@@ -1,0 +1,47 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "workbench.colorTheme": "Dracula Theme",
+    "chat.editing.alwaysSaveWithGeneratedChanges": false,
+    "explorer.confirmDelete": false,
+    "npm.enableRunFromFolder": true,
+    "npm.scriptExplorerAction": "run",
+    "security.workspace.trust.untrustedFiles": "open",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "workbench.iconTheme": "eclipse-icons",
+    "workbench.startupEditor": "none",
+    "git.ignoreMissingGitWarning": true,
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.tools.terminal.autoApprove": {
+        "wsl": false,
+        "docker-compose": false
+    },
+    "editor.largeFileOptimizations": false,
+    "terminal.integrated.initialHint": false,
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "ROOT"
+        }
+    ],
+    "tabnine.completionsLoadingIndicatorEnabled": false,
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "claudeCode.preferredLocation": "panel",
+    "python.autoComplete.extraPaths": [
+        
+    ],
+    //"workbench.editor.empty.hint": "hidden",
+    //"network.meteredConnection": "on",
+    //// ===== AI slået fra =====
+    //"chat.disableAIFeatures": true,
+    //"chat.agent.enabled": false,
+    //"chat.commandCenter.enabled": false,
+    //"github.copilot.enable": {
+    //    "*": false
+    //},
+    //"editor.inlineSuggest.enabled": false,
+    //"security.allowedUNCHosts": [
+    //    "wsl.localhost"
+    //]
+}
