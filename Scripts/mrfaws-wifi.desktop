@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=MrFaws Network Manager
+GenericName=Network Manager
+Comment=Dracula-themed Wi-Fi, Ethernet and VPN manager for NetworkManager
+Exec=/usr/bin/python3 /home/faws/Config/Scripts/wifi-gui.py
+Icon=network-wireless
+Terminal=false
+Categories=Network;Settings;GTK;
+Keywords=wifi;wireless;network;ethernet;vpn;networkmanager;
+StartupNotify=true
+StartupWMClass=dk.mrfaws.NetworkManager
