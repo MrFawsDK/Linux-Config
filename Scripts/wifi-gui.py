@@ -18,9 +18,11 @@ import os
 import sys
 
 # The package sits next to this script. The launcher runs this file by
-# absolute path, so the working directory can be anything; add the script's
-# own directory to the import path explicitly.
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# absolute path and the `mrfaws-network` command reaches it through a
+# symlink in ~/.local/bin, so the working directory can be anything.
+# realpath() follows that symlink back to Scripts/ before adding it to
+# the import path.
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
