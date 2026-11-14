@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=MrFaws Display Manager
+GenericName=Display Settings
+Comment=Dracula-themed monitor and brightness settings for Hyprland
+Exec=/usr/bin/python3 /home/faws/Config/Scripts/display-gui.py
+Icon=video-display
+Terminal=false
+Categories=Settings;HardwareSettings;GTK;
+Keywords=display;monitor;screen;brightness;resolution;scale;rotation;mirror;hdmi;skærm;lysstyrke;
+StartupNotify=true
+StartupWMClass=dk.mrfaws.DisplayManager

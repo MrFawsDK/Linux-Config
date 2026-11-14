@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=MrFaws Sound Manager
+GenericName=Volume Control
+Comment=Dracula-themed volume control for PipeWire
+Exec=/usr/bin/python3 /home/faws/Config/Scripts/sound-gui.py
+Icon=audio-volume-high
+Terminal=false
+Categories=AudioVideo;Audio;Mixer;Settings;GTK;
+Keywords=sound;audio;volume;speaker;headphones;microphone;mixer;pipewire;
+StartupNotify=true
+StartupWMClass=dk.mrfaws.SoundManager
