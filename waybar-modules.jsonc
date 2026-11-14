@@ -2,9 +2,30 @@
 
 {
 
+"bluetooth": {
+    "format": "󰂯 {status}",
+    "format-connected": "󰂱 {device_alias}",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+},
+
 "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "interval": 5,
+        "states": { "warning": 30, "critical": 15 },
+        "format": "<span size='120%'>{icon}</span> {capacity}%",
+        "format-charging": "<span size='120%' color='#a6e3a1'>{icon}</span> {capacity}%",
+        "format-plugged": "<span size='120%' color='#a6e3a1'>󰚥</span> {capacity}%",
+        "format-full": "<span size='120%' color='#a6e3a1'>󰚥</span> {capacity}%",
+        "format-icons": {
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        },
+        "tooltip-format": "{timeTo}\nStrøm: {power:.1f} W",
+        "tooltip-format-full": "Fuldt opladet"
     },
     
     "clock": {
@@ -31,7 +52,10 @@
         "default": ["", ""]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
+    "max-volume": 100,
+    "tooltip-format": "{desc} · {volume}%",
+    "on-click": "$HOME/.local/bin/sound",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "ignored-sinks": ["Easy Effects Sink"]
    
     },

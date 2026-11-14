@@ -9,7 +9,7 @@
     "margin-top": 5,
     "modules-left": [ "clock", "tray", "hyprland/workspaces", "mpris"],
     "modules-center": [ ],
-    "modules-right": [ "network", "pulseaudio", "battery"  ],
+    "modules-right": [ "bluetooth", "network", "pulseaudio", "battery"  ],
     "sway/window": {
         "max-length": 50
     },
